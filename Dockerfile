@@ -15,7 +15,8 @@ RUN cd /usr/gollum \
     && bundle install \
     && rake build
 
-RUN gem install github-linguist \
+RUN cd /usr/gollum \
+    && gem install github-linguist \
     && gem install --no-document pkg/gollum*.gem
 
 
